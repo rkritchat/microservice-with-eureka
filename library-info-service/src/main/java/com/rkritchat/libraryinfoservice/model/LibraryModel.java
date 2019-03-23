@@ -1,10 +1,9 @@
-package com.rkritchat.studentinfoservice.model;
+package com.rkritchat.libraryinfoservice.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
+
 
 @Data
 @NoArgsConstructor

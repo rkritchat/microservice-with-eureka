@@ -1,0 +1,7 @@
+
+spring:
+  application:
+    name: library-info-service
+
+server:
+  port: 8083
