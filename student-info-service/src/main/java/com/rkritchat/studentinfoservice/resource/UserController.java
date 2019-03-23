@@ -34,7 +34,7 @@ public class UserController {
     }
 
     private SchoolSubjectModel callSchoolSubjectService(String id) {
-        return restTemplate.getForObject("http://localhost:8084/school/subject/" + id, SchoolSubjectModel.class);
+        return restTemplate.getForObject("http://SCHOOL-SUBJECT-SERVICE/school/subject/" + id, SchoolSubjectModel.class);
 
     }
 
@@ -49,6 +49,6 @@ public class UserController {
     }
 
     private LibraryModel callLibraryService(String userId) {
-        return restTemplate.getForObject("http://localhost:8083/library/" + userId, LibraryModel.class);
+        return restTemplate.getForObject("http://LIBRARY-INFO-SERVICE/library/" + userId, LibraryModel.class);
     }
 }
