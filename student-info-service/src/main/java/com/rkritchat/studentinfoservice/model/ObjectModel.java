@@ -1,0 +1,15 @@
+package com.rkritchat.studentinfoservice.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class ObjectModel {
+
+    private String id;
+    private String name;
+
+}
