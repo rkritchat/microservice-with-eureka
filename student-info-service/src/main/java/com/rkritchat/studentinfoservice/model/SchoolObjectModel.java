@@ -11,6 +11,6 @@ import java.util.List;
 @AllArgsConstructor
 public class SchoolObjectModel {
 
-    List<ObjectModel> object;
+    private List<ObjectModel> object;
 
 }

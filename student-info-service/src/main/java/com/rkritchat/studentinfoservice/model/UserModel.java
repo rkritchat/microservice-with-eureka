@@ -13,6 +13,6 @@ public class UserModel {
     private String firstName;
     private String lastName;
     private SchoolObjectModel schoolObjectModel;
-    private LibraryModel librartModel;
+    private LibraryModel libraryModel;
 
 }

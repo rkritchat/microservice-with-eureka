@@ -2,6 +2,8 @@ package com.rkritchat.libraryinfoservice.resource;
 
 import com.rkritchat.libraryinfoservice.model.BookModel;
 import com.rkritchat.libraryinfoservice.model.LibraryModel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,8 +16,11 @@ import java.util.List;
 @RequestMapping("/library")
 public class LibraryController {
 
+    Logger logger = LoggerFactory.getLogger(LibraryController.class);
+
     @GetMapping("/{userId}")
     public LibraryModel getLibraryDetail(@PathParam("userId") String userId) {
+        logger.info("User id : {}", userId);
         LibraryModel mockLibrary = new LibraryModel();
         mockLibraryModel(mockLibrary);
         return mockLibrary;
