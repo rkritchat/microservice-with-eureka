@@ -1,6 +1,7 @@
 package com.rkritchat.studentinfoservice.resource;
 
 import com.rkritchat.studentinfoservice.model.LibraryModel;
+import com.rkritchat.studentinfoservice.model.SchoolSubjectModel;
 import com.rkritchat.studentinfoservice.model.UserModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,14 +25,17 @@ public class UserController {
     public UserModel getuserInfo(@RequestBody UserModel userModel) {
 
         UserModel response = mockUserModel();
-
-        LibraryModel libraryModel = callLibraryService(userModel);
-
-        logger.info("LibraryModel : {}", libraryModel);
-
+        LibraryModel libraryModel = callLibraryService(userModel.getId());
+        SchoolSubjectModel schoolSubjectModel = callSchoolSubjectService(userModel.getId());
         response.setLibraryModel(libraryModel);
-
+        response.setSchoolSubjectModel(schoolSubjectModel);
         return response;
+
+    }
+
+    private SchoolSubjectModel callSchoolSubjectService(String id) {
+        return restTemplate.getForObject("http://localhost:8084/school/subject/" + id, SchoolSubjectModel.class);
+
     }
 
     private UserModel mockUserModel() {
@@ -44,7 +48,7 @@ public class UserController {
         return userModel;
     }
 
-    private LibraryModel callLibraryService(@RequestBody UserModel userModel) {
-        return restTemplate.getForObject("http://localhost:8083/library/" + userModel.getId(), LibraryModel.class);
+    private LibraryModel callLibraryService(String userId) {
+        return restTemplate.getForObject("http://localhost:8083/library/" + userId, LibraryModel.class);
     }
 }

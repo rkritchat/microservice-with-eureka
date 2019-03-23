@@ -7,12 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserModel {
+public class SubjectModel {
 
     private String id;
-    private String firstName;
-    private String lastName;
-    private SchoolSubjectModel schoolSubjectModel;
-    private LibraryModel libraryModel;
+    private String name;
 
 }

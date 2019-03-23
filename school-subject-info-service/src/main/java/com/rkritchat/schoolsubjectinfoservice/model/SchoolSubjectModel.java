@@ -1,4 +1,4 @@
-package com.rkritchat.studentinfoservice.model;
+package com.rkritchat.schoolsubjectinfoservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,8 +9,8 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class SchoolObjectModel {
+public class SchoolSubjectModel {
 
-    private List<ObjectModel> object;
+    private List<SubjectModel> subjects;
 
 }
