@@ -1,0 +1,10 @@
+
+#this is default port of eureka, if you change this you need to map client-server port by yourself.
+server:
+  port: 8761
+
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
