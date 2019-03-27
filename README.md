@@ -21,7 +21,7 @@ Eureka console : http://localhost:8761/ <br><br>
     <li> mock SchoolSubjectModel
     </ul><br>
 
-<b>This project not use database.</b>
+<b>This project not use database.</b><br>
 <br>
 Install nginx<br>
   1.sudo apt-get insatll nginx<br>
@@ -37,3 +37,10 @@ Install nginx<br>
             proxy_set_header  Host $http_host;<br>
 	   }<br>
    Above example is mapping port localhost8080 to localhost    
+   
+   <br><br>
+   <b>nginx command</b>
+   - go to nginx directory : cd /etc/nginx/sites-enabled  (this path will has default in type text)<br>
+   - start revert poxy : sudo service nginx start<br>
+   - stop nginx : sudo service nginx stop<br>
+   
