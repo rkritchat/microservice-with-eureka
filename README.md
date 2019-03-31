@@ -39,8 +39,11 @@ Install nginx<br>
    Above example is mapping port localhost8080 to localhost    
    
    <br><br>
-   <b>nginx command</b>
+   <b>Nginx basic command</b>
    - go to nginx directory : cd /etc/nginx/sites-enabled  (this path will has default in type text)<br>
    - start revert poxy : sudo service nginx start<br>
-   - stop nginx : sudo service nginx stop<br>
+   - stop nginx : sudo service nginx stop<br><br>
+   
+   <b>Install Nginxon ubuntu</b><br>
+   https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04-quickstart
    
